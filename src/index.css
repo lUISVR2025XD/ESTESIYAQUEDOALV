@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-black/30 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg;
+}
+
+.leaflet-geosearch-bar {
+  z-index: 1000 !important;
+  border-radius: 8px;
+  background-color: white;
+  backdrop-filter: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-geosearch-bar form input {
+  background-color: transparent !important;
+  color: black !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+.leaflet-geosearch-bar form input::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-geosearch-bar .results {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-geosearch-bar .results > * {
+  color: black;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.leaflet-geosearch-bar .results > *:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.leaflet-geosearch-bar .results .active {
+  background-color: rgba(88, 101, 242, 0.2);
+}
+
+.leaflet-control-geosearch.bar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0 auto;
+    max-width: 400px;
+}
